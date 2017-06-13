@@ -1,5 +1,5 @@
 import './textItems.scss';
-import { injectReducer } from '../../store/reducers'
+import { injectReducer } from '../../store/reducers';
 
 export default (store) => ({
   path : 'textItems',
@@ -17,9 +17,9 @@ export default (store) => ({
       injectReducer(store, { key: 'textItems', reducer });
 
       /*  Return getComponent   */
-      cb(null, TextItems)
+      cb(null, TextItems);
 
     /* Webpack named bundle   */
-    }, 'textItems')
+    }, 'textItems');
   }
-})
+});

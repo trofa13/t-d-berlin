@@ -9,26 +9,26 @@ export const RESET_STATE = 'RESET_STATE';
 // Actions
 // ------------------------------------
 export function increment (itemId = '', value = 1) {
-    return {
-      type    : COUNTER_INCREMENT,
-      payload : {
-        itemId,
-        value
-      }
-  }
+  return {
+    type    : COUNTER_INCREMENT,
+    payload : {
+      itemId,
+      value
+    }
+  };
 }
 
 export function addItem (value = '') {
   return {
     type    : FORM_ADD_ITEM,
     payload : value
-  }
+  };
 }
 
 export function resetState () {
   return {
     type: RESET_STATE
-  }
+  };
 }
 
 export const actions = {
@@ -49,22 +49,22 @@ const ACTION_HANDLERS = {
       return item;
     });
 
-    return { ...state, items}
+    return { ...state, items };
   },
 
   [FORM_ADD_ITEM]: (state, action) => {
-    return { ...state, items: state.items.concat(action.payload) }
+    return { ...state, items: state.items.concat(action.payload) };
   },
 
   [RESET_STATE]: () => {
-    return {items: []};
+    return { items: [] };
   }
 };
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = {items: []};
+const initialState = { items: [] };
 
 export default function textItemsReducer (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type];

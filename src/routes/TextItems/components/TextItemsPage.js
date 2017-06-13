@@ -7,15 +7,15 @@ export const TextItemsPage = ({ items, increment, addItem, resetState }) => (
   <div>
     <Form addItem={addItem} />
 
-    <ul className="list-unstyled">
+    <ul className='list-unstyled'>
       {items.map((item) => (
-        <li key={item.id} className="list-item">
-          <TextItem text={item.text} count={item.count} increment={increment} itemId={item.id}/>
+        <li key={item.id} className='list-item'>
+          <TextItem text={item.text} count={item.count} increment={increment} itemId={item.id} />
         </li>
       ))}
     </ul>
 
-    <button className="btn btn-primary" type="button" onClick={resetState}> Reset state </button>
+    <button className='btn btn-primary' type='button' onClick={resetState}> Reset state </button>
   </div>
 );
 

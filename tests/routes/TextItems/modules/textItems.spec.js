@@ -1,13 +1,12 @@
 import {
   COUNTER_INCREMENT,
   increment,
-  doubleAsync,
   default as textItemsReducer
-} from 'routes/TextItems/modules/textItems'
+} from 'routes/TextItems/modules/textItems';
 
 describe('(Redux Module) TextItems', () => {
   it('Should export a constant COUNTER_INCREMENT.', () => {
-    expect(COUNTER_INCREMENT).to.equal('COUNTER_INCREMENT')
+    expect(COUNTER_INCREMENT).to.equal('COUNTER_INCREMENT');
   });
 
   describe('(Reducer)', () => {
@@ -28,7 +27,7 @@ describe('(Redux Module) TextItems', () => {
       expect(state).to.deep.equal({ items: [] });
       state = textItemsReducer(state, { type: '@@@@@@@' });
       expect(state).to.deep.equal({ items: [] });
-    })
+    });
   });
 
   describe('(Action Creator) increment', () => {

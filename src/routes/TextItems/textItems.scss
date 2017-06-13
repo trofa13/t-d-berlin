@@ -1,0 +1,16 @@
+.list-item {
+  text-align: left;
+  margin-top: 20px;
+
+  &__text {
+    font-weight: bold;
+  }
+
+  &__count {
+    margin-left: 10px;
+  }
+
+  &__button {
+    margin-left: 10px;
+  }
+}

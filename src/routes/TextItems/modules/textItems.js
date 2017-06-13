@@ -8,7 +8,7 @@ export const RESET_STATE = 'RESET_STATE';
 // ------------------------------------
 // Actions
 // ------------------------------------
-export function increment (itemId, value = 1) {
+export function increment (itemId = '', value = 1) {
     return {
       type    : COUNTER_INCREMENT,
       payload : {
